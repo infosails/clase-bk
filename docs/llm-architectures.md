@@ -9,7 +9,7 @@ Si utilizas Reveal.js, separa cada diapositiva con "---".
 1. Introducción a los LLM
 2. Panorama de modelos comerciales y open‑source
 3. Arquitecturas de agentes
-4. **Ciclo de vida de desarrollo de software con LLMs**
+4. Ciclo de vida de desarrollo de software con LLMs
 5. Herramientas y frameworks
 6. Model Context Protocol (MCP)
 7. Métricas y evaluación
@@ -52,22 +52,10 @@ Si utilizas Reveal.js, separa cada diapositiva con "---".
 | **Perplexity AI**   | **PPLX‑Llama‑3‑70B‑Chat**         | Fine‑tune para búsqueda conversacional.                            |
 | **Cohere**          | **Command‑R+ / Embed‑v3**         | Optimizado para RAG (grounding) y embeddings de alta cobertura.    |
 | *Otros open‑source* | **Zephyr‑7B, Phi‑3‑mini**         | Modelos compactos con licencias permisivas.                        |
-
-\-----------|--------|-------|
-\| **Anthropic** | **Claude 3** | Foco en seguridad y respuestas largas. |
-\| **Google DeepMind** | **Gemini 1.5 / PaLM 2** | Multimodal y multilingüe. |
-\| **Meta** | **LLaMA 2 / 3** | Open‑source, variantes 7‑70 B. |
-\| **Mistral AI** | **Mistral‑Large / Mixtral‑8x22B** | MoE con 22 B rutas, SOTA en eficiencia. |
-\| **xAI** | **Grok‑1.5** | Contexto ampliado, open‑weights anunciados. |
-\| **Perplexity AI** | **PPLX‑Llama‑3‑70B‑Instruct** | Fine‑tune para búsqueda conversacional. |
-\| **Cohere** | **Command‑R+** | Optimizado para RAG y grounding. |
-\| *Open‑source* | **Mistral‑7B, Zephyr‑7B, Phi‑3‑mini** | Modelos compactos y permissive‑license.
-
-\-----------|--------|-------|
-\| **Anthropic** | **Claude 3** | Foco en seguridad y respuestas largas. |
-\| **Google DeepMind** | **Gemini 1.5 / PaLM 2** | Multimodal y multilingüe. |
-\| **Meta** | **LLaMA 2 / 3** | Open‑source, variantes 7‑70 B. |
-\| *Open‑source* | **Mistral‑7B, Mixtral‑8x7B** | Arquitectura Mixture‑of‑Experts.
+| **Anthropic** | **Claude 3** | Foco en seguridad y respuestas largas. |
+| **Google DeepMind** | **Gemini 1.5 / PaLM 2** | Multimodal y multilingüe. |
+| **Meta** | **LLaMA 2 / 3** | Open‑source, variantes 7‑70 B. |
+| *Open‑source* | **Mistral‑7B, Mixtral‑8x7B** | Arquitectura Mixture‑of‑Experts.
 
 ---
 
@@ -194,7 +182,7 @@ graph LR
 * **DevOps / LLMOps**: CI/CD, escalabilidad, monitoreo.
 * **Security & Compliance**: revisa PII, políticas y auditorías.
 
-### 5.4 Buenas Prácticas Buenas Prácticas
+### 5.4 Buenas Prácticas
 
 1. **Shift‑Left Testing**: validar prompts y seguridad desde fases tempranas.
 2. **Data Contracts**: versionar datasets de entrenamiento y RAG.
@@ -226,12 +214,6 @@ sequenceDiagram
     USER-->>PO: Feedback & métricas
     PO->>PE: Nuevos requisitos
 ```
-
-\--------|---------|-------------|
-\| **Secuencial** | Pasos estrictamente en cadena. | ETL, pipelines deterministas. |
-\| **Paralelo** | Múltiples ramas simultáneas. | Análisis en lote o fusión de fuentes. |
-\| **Condicional** | Ramas basadas en lógica. | Flujos con reglas o clasificadores. |
-\| **Iterativo** | Bucle de mejora (reflexión/pruebas). | Optimización de respuestas. |
 
 ---
 
@@ -269,13 +251,13 @@ sequenceDiagram
 
 ### 7.1 Visión General
 
-El **Model Context Protocol (MCP)** es un estándar abierto que define **cómo** las aplicaciones proporcionan contexto y herramientas a los LLMs —similar a un "USB‑C" para conectar fuentes de datos, APIs y capacidades externas de forma uniforme. citeturn0search2
+El **Model Context Protocol (MCP)** es un estándar abierto que define **cómo** las aplicaciones proporcionan contexto y herramientas a los LLMs —similar a un "USB‑C" para conectar fuentes de datos, APIs y capacidades externas de forma uniforme. 
 
 ### 7.2 Componentes Principales
 
 * **MCP Host**: Aplicación que aloja al agente (p. ej., un chat o dashboard).
 * **MCP Client**: Manejador dentro del host que solicita acciones/contexto.
-* **MCP Server(s)**: Puente hacia datos o herramientas concretas (CRM, GitHub, bases de conocimiento). citeturn0search0turn0search1
+* **MCP Server(s)**: Puente hacia datos o herramientas concretas (CRM, GitHub, bases de conocimiento). 
 
 ### 7.3 Arquitectura de Referencia
 
@@ -303,17 +285,17 @@ graph TD
 ### 7.4 Beneficios Clave
 
 1. **Interoperabilidad**: Un solo protocolo para múltiples fuentes y herramientas.
-2. **Seguridad**: Control granular de permisos (read‑only, read‑write). citeturn0search6
+2. **Seguridad**: Control granular de permisos (read‑only, read‑write). 
 3. **Escalabilidad**: Conectar nuevos back‑ends sin reescribir prompts.
 4. **Observabilidad**: Facilita trazas y auditoría de llamadas de herramienta.
 
 ### 7.5 Ecosistema y Herramientas
 
-| Categoría                  | Ejemplos                                                                                |
-| -------------------------- | --------------------------------------------------------------------------------------- |
-| **SDKs**                   | `openai-agents-python` citeturn0search8, `lastmile-ai/mcp-agent` citeturn0search3 |
-| **Servers Ready‑Made**     | Replit Codebase MCP, Anthropic Repo Connector citeturn0news16                        |
-| **Frameworks Compatibles** | LangChain, LangGraph, CrewAI, LlamaIndex                                                |
+| Categoría                  | Ejemplos                                          |
+| -------------------------- | ------------------------------------------------- |
+| **SDKs**                   | `openai-agents-python` , `lastmile-ai/mcp-agent`  |
+| **Servers Ready‑Made**     | Replit Codebase MCP, Anthropic Repo Connector     |
+| **Frameworks Compatibles** | LangChain, LangGraph, CrewAI, LlamaIndex          |
 
 ### 7.6 Casos de Uso
 
@@ -321,7 +303,7 @@ graph TD
 * **RAG Dinámico**: Inyectar contexto de bases de conocimiento corporativas.
 * **Orquestación de Herramientas**: LLM decide usar "crear PR" o "consultar DB" vía MCP.
 
-## 8. Métricas y Evaluación y Evaluación
+## 8. Métricas y Evaluación
 
 | Métrica           | ¿Qué mide?                         |
 | ----------------- | ---------------------------------- |
@@ -338,7 +320,7 @@ graph TD
 
 ---
 
-## 9. Desarrollo y Despliegue y Despliegue
+## 9. Desarrollo y Despliegue
 
 ### 8.1 Metodologías
 
@@ -366,7 +348,7 @@ graph TD
 
 ---
 
-## 11. Seguridad y Ética y Ética
+## 11. Seguridad y Ética
 
 * **Protección de datos**: cifrado, PII redaction.
 * **Prevención de abusos**: rate‑limiting, filtros de contenido.
@@ -374,14 +356,14 @@ graph TD
 
 ---
 
-## 12. Optimización y Escalabilidad y Escalabilidad
+## 12. Optimización y Escalabilidad
 
 * **Costos**: caching, modelos más pequeños, batch.
 * **Escalabilidad**: serverless, auto‑scaling, horizontality.
 
 ---
 
-## 13. Tendencias Futuras Futuras
+## 13. Tendencias Futuras
 
 * Agentes más autónomos (long‑term planning).
 * Mayor integración con APIs y herramientas externas.
