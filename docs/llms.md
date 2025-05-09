@@ -182,10 +182,3 @@ flowchart LR
 
 ---
 
-### ¡Gracias!
-
-> **Contacto:** [tu‑nombre@ejemplo.com](mailto:tu‑nombre@ejemplo.com)
-
----
-
-*Esta presentación está diseñada en Markdown con diagramas Mermaid para facilitar su visualización en plataformas como GitHub o VS Code.*
