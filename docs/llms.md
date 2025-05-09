@@ -4,15 +4,6 @@
 
 ---
 
-## Agenda
-
-1. Definición y contexto histórico
-2. Origen: del *Transformer* a los LLM actuales
-3. Anatomía de un LLM
-4. Proceso de entrenamiento (pre‑entrenamiento & ajustes)
-5. Inferencia y *serving* en producción
-6. Casos de uso, riesgos y buenas prácticas
-7. Glosario y referencias clave
 
 ---
 
@@ -46,7 +37,47 @@ timeline
 
 ---
 
-## 3. Anatomía de un LLM
+## 3. ¿Attention?
+
+### Qué hace el "attention"?
+Imagina que el modelo está leyendo una oración palabra por palabra, pero en vez de mirar solo la palabra actual, puede mirar todas las palabras de la oración y decidir cuáles son más importantes.
+
+#### Ejemplo con frase:
+"El gato come pescado"
+
+Cuando el modelo lee la palabra "come", se pregunta:
+
+¿Qué otras palabras me ayudan a entender mejor "come"?
+
+Entonces mira a todas las palabras:
+
+- "el"
+
+- "gato"
+
+- "come"
+
+- "pescado"
+
+ Y decide, por ejemplo:
+
+| Palabra | Importancia para "come" |
+| ------- | ----------------------- |
+| el      | 10%                     |
+| gato    | 40% ✅                   |
+| come    | 30%                     |
+| pescado | 20% ✅                   |
+
+#### ¿Para qué sirve esto?
+Así el modelo entiende mejor el significado de cada palabra en contexto.
+Por ejemplo, "gato" (el que come) y "pescado" (lo que come) son más importantes para entender el verbo "come".
+
+#### Resultado final:
+El modelo mezcla todas las palabras, pero le da más peso a las importantes para tomar su decisión.
+Así puede traducir, responder o continuar la frase de forma mucho más inteligente.
+
+
+## 4. Anatomía de un LLM
 
 ### Flujo de datos interno
 
@@ -76,7 +107,7 @@ siguiente token]
 
 ---
 
-## 4. Proceso de entrenamiento
+## 5. Proceso de entrenamiento
 
 ```mermaid
 flowchart TD
@@ -102,7 +133,7 @@ isto para producción}
 
 ---
 
-## 5. Inferencia y *Serving*
+## 6. Inferencia y *Serving*
 
 ```mermaid
 sequenceDiagram
@@ -140,7 +171,7 @@ flowchart LR
 
 ---
 
-## 6. Casos de uso, riesgos y buenas prácticas
+## 7. Casos de uso, riesgos y buenas prácticas
 
 ### Casos de uso
 
@@ -160,7 +191,7 @@ flowchart LR
 
 ---
 
-## 7. Glosario
+## 8. Glosario
 
 | Término            | Definición breve                                         |
 | ------------------ | -------------------------------------------------------- |
@@ -172,7 +203,7 @@ flowchart LR
 
 ---
 
-## 8. Referencias recomendadas
+## 9. Referencias recomendadas
 
 1. Vaswani et al., *Attention Is All You Need*, 2017.
 2. Brown et al., *Language Models are Few‑Shot Learners* (GPT‑3), 2020.
