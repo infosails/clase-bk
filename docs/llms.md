@@ -52,7 +52,7 @@ timeline
 
 ```mermaid
 flowchart TD
-  A[Texto crudo] --> B{Tokenizació\n(BPE, WordPiece)}
+  A[Input] --> B["Tokenización\n(BPE, WordPiece)"]
   B --> C[Embeddings
   (vector d<sub>model</sub>)]
   C --> D[Capas \*N Transformer<br/>Self‑Attention & Feed‑Forward]
