@@ -111,8 +111,7 @@ sequenceDiagram
     Cliente->>API LLM: Prompt / Input
     API LLM->>API LLM: Búsqueda de contexto
 Cálculo de atención
-    API LLM-->>Cliente: Tokens
-de salida (streaming)
+    API LLM-->>Cliente: Tokens de salida (streaming)
 ```
 
 ### Estrategias de decodificación
