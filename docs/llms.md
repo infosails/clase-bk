@@ -86,7 +86,8 @@ flowchart TD
   C2 --> D1{Modelo alineado y listo para producción}
 ```
 
-**Pérdida total:** \$\mathcal{L} = \mathcal{L}*{MLE} + \lambda*{RL} ; \mathcal{L}\_{RLHF}\$
+**Pérdida total:** $\mathcal{L} = \mathcal{L}_{\text{MLE}} + \lambda \cdot \mathcal{L}_{\text{RL}};\ \mathcal{L}_{\text{RLHF}}$
+
 ---
 
 ## 5. Inferencia y *Serving*
