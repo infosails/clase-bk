@@ -54,11 +54,15 @@ timeline
 flowchart TD
   A[Input] --> B["Tokenización
  (BPE, WordPiece)"]
-  B --> C["Embeddings (vector d_model)"]
-  C --> D[Capas \*N Transformer<br/>Self‑Attention & Feed‑Forward]
-  D --> E["Proyección a vocabulario (logits)"]
+  B --> C["Embeddings (
+vector d_model)"]
+  C --> D[Capas \*N Transformer
+Self‑Attention & Feed‑Forward]
+  D --> E["Proyección a
+vocabulario (logits)"]
   E --> F[Softmax → Probabilidades]
-  F --> G[Decodificación<br/>siguiente token]
+  F --> G[Decodificación
+siguiente token]
 ```
 
 ### Componentes clave
@@ -77,14 +81,20 @@ flowchart TD
 ```mermaid
 flowchart TD
   subgraph Pre-entrenamiento
-    A1(Corpus masivo Internet, libros, código) --> A2[Tokenización]
-    A2 --> A3[Objetivo:  Predicción de siguiente token]
-    A3 --> A4["Actualización de peso (Backprop + AdamW)"]
+    A1(Corpus masivo Internet,
+libros, código) --> A2[Tokenización]
+    A2 --> A3[Objetivo:
+Predicción de siguiente token]
+    A3 --> A4["Actualización de
+peso (Backprop + AdamW)"]
   end
   A4 --> B1{Modelo pre‑entrenado}
-  B1 --> C1[Fine‑Tuning supervisado + Instrucciones]
-  C1 --> C2[RLHF / DPO Alineación con humanos]
-  C2 --> D1{Modelo alineado y listo para producción}
+  B1 --> C1[Fine‑Tuning
+supervisado + Instrucciones]
+  C1 --> C2[RLHF / DPO
+Alineación con humanos]
+  C2 --> D1{Modelo alineado y l
+isto para producción}
 ```
 
 **Pérdida total:** `L = L_MLE + λ·L_RL ; L_RLHF`
@@ -99,8 +109,11 @@ sequenceDiagram
     participant Cliente
     participant API LLM
     Cliente->>API LLM: Prompt / Input
-    API LLM->>API LLM: \nBúsqueda de contexto\nCálculo de atención
-    API LLM-->>Cliente: Tokens de salida (streaming)
+    API LLM->>API LLM:
+Búsqueda de contexto
+Cálculo de atención
+    API LLM-->>Cliente: Tokens
+de salida (streaming)
 ```
 
 ### Estrategias de decodificación
