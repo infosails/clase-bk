@@ -39,6 +39,7 @@ timeline
 
 ## 3. ¿Attention?
 
+[Attention is all you need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf)
 ### Qué hace el "attention"?
 Imagina que el modelo está leyendo una oración palabra por palabra, pero en vez de mirar solo la palabra actual, puede mirar todas las palabras de la oración y decidir cuáles son más importantes.
 
