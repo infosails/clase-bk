@@ -55,8 +55,7 @@ flowchart TD
   A[Input] --> B["Tokenización\n(BPE, WordPiece)"]
   B --> C["Embeddings (vector d_model)"]
   C --> D[Capas \*N Transformer<br/>Self‑Attention & Feed‑Forward]
-  D --> E[Proyección a vocabulario
-  (logits)]
+  D --> E[Proyección a vocabulario(logits)]
   E --> F[Softmax → Probabilidades]
   F --> G[Decodificación<br/>siguiente token]
 ```
