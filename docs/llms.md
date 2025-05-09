@@ -52,7 +52,7 @@ timeline
 
 ```mermaid
 flowchart TD
-  A[Input] --> B["Tokenización\n(BPE, WordPiece)"]
+  A[Input] --> B["Tokenización \n (BPE, WordPiece)"]
   B --> C["Embeddings (vector d_model)"]
   C --> D[Capas \*N Transformer<br/>Self‑Attention & Feed‑Forward]
   D --> E["Proyección a vocabulario (logits)"]
@@ -82,7 +82,7 @@ flowchart TD
   end
   A4 --> B1{Modelo pre‑entrenado}
   B1 --> C1[Fine‑Tuning supervisado + Instrucciones]
-  C1 --> C2[RLHF / DPO\nAliniación con humanos]
+  C1 --> C2[RLHF / DPO Alineación con humanos]
   C2 --> D1{Modelo alineado y listo para producción}
 ```
 
