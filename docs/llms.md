@@ -76,12 +76,12 @@ flowchart TD
 ```mermaid
 flowchart TD
   subgraph Pre-entrenamiento
-    A1(Corpus masivo\nInternet, libros, código) --> A2[Tokenización]
-    A2 --> A3[Objetivo: \nPredicción de siguiente token]
+    A1(Corpus masivo Internet, libros, código) --> A2[Tokenización]
+    A2 --> A3[Objetivo:  Predicción de siguiente token]
     A3 --> A4["Actualización de peso (Backprop + AdamW)"]
   end
   A4 --> B1{Modelo pre‑entrenado}
-  B1 --> C1[Fine‑Tuning supervisado\n+ Instrucciones]
+  B1 --> C1[Fine‑Tuning supervisado + Instrucciones]
   C1 --> C2[RLHF / DPO\nAliniación con humanos]
   C2 --> D1{Modelo alineado y listo para producción}
 ```
