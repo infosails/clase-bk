@@ -109,8 +109,7 @@ sequenceDiagram
     participant Cliente
     participant API LLM
     Cliente->>API LLM: Prompt / Input
-    API LLM->>API LLM: Búsqueda de contexto
-Cálculo de atención
+    API LLM->>API LLM: Búsqueda de contexto Cálculo de atención
     API LLM-->>Cliente: Tokens de salida (streaming)
 ```
 
