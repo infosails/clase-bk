@@ -75,7 +75,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-  subgraph Pre‑entrenamiento
+  subgraph Pre-entrenamiento
     A1(Corpus masivo\nInternet, libros, código) --> A2[Tokenización]
     A2 --> A3[Objetivo: \nPredicción de siguiente token]
     A3 --> A4[Actualización de peso\n(Backprop + AdamW)]
