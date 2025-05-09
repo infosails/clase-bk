@@ -28,6 +28,7 @@ Si utilizas Reveal.js, separa cada diapositiva con "---".
 * **Capacidades clave**: comprensión contextual, razonamiento, generación de texto, traducción, sumarización.
 * **Limitaciones**: alucinaciones, sesgos, sensibilidad al prompt, coste computacional.
 
+[llm](https://github.com/infosails/clase-bk/blob/main/docs/llms.md)
 ---
 
 ## 3. Panorama de Modelos
