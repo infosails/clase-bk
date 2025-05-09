@@ -87,7 +87,6 @@ flowchart TD
 ```
 
 **Pérdida total:** \$\mathcal{L} = \mathcal{L}*{MLE} + \lambda*{RL} ; \mathcal{L}\_{RLHF}\$
-
 ---
 
 ## 5. Inferencia y *Serving*
