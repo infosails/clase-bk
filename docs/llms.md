@@ -86,7 +86,8 @@ flowchart TD
   C2 --> D1{Modelo alineado y listo para producción}
 ```
 
-**Pérdida total:** $\mathcal{L} = \mathcal{L}_{\text{MLE}} + \lambda \cdot \mathcal{L}_{\text{RL}};\ \mathcal{L}_{\text{RLHF}}$
+**Pérdida total:** `L = L_MLE + λ·L_RL ; L_RLHF`
+
 
 ---
 
