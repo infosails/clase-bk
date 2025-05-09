@@ -52,7 +52,7 @@ timeline
 
 ```mermaid
 flowchart TD
-  A[Texto crudo] --> B{Tokenización<br/>(BPE, WordPiece)}
+  A[Texto crudo] --> B{Tokenizació\n(BPE, WordPiece)}
   B --> C[Embeddings
   (vector d<sub>model</sub>)]
   C --> D[Capas \*N Transformer<br/>Self‑Attention & Feed‑Forward]
@@ -78,13 +78,13 @@ flowchart TD
 ```mermaid
 flowchart TD
   subgraph Pre‑entrenamiento
-    A1(Corpus masivo<br/>Internet, libros, código) --> A2[Tokenización]
-    A2 --> A3[Objetivo: <br/>Predicción de siguiente token]
-    A3 --> A4[Actualización de pesos<br/>(Backprop + AdamW)]
+    A1(Corpus masivo\nInternet, libros, código) --> A2[Tokenización]
+    A2 --> A3[Objetivo: \nPredicción de siguiente token]
+    A3 --> A4[Actualización de peso\n(Backprop + AdamW)]
   end
   A4 --> B1{Modelo pre‑entrenado}
-  B1 --> C1[Fine‑Tuning supervisado<br/>+ Instrucciones]
-  C1 --> C2[RLHF / DPO<br/>Aliniación con humanos]
+  B1 --> C1[Fine‑Tuning supervisado\n+ Instrucciones]
+  C1 --> C2[RLHF / DPO\nAliniación con humanos]
   C2 --> D1{Modelo alineado y listo para producción}
 ```
 
@@ -99,7 +99,7 @@ sequenceDiagram
     participant Cliente
     participant API LLM
     Cliente->>API LLM: Prompt / Input
-    API LLM->>API LLM: <br/>Búsqueda de contexto<br/>Cálculo de atención
+    API LLM->>API LLM: \nBúsqueda de contexto\nCálculo de atención
     API LLM-->>Cliente: Tokens de salida (streaming)
 ```
 
